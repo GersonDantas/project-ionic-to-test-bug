@@ -1,0 +1,29 @@
+@import '../../theme/variables.module.scss';
+
+.input {
+  border       : 1px solid rgba($black, .5);
+  line-height  : 40px;
+  border-radius: $borderRadiusTertiary;
+  padding      : 0px 10px;
+  height       : fit-content;
+
+  &[data-status='valid'] {
+    border-color: $primaryColor;
+  }
+
+  &[data-status='invalid'] {
+    border-color: $invalid;
+  }
+
+  &:focus {
+    &[data-status='valid'] {
+      outline-color: $primaryColor;
+    }
+
+    &[data-status='invalid'] {
+      outline-color: $invalid;
+    }
+
+    outline-color: rgba($black, .5);
+  }
+}
